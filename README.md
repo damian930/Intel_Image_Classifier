@@ -8,4 +8,4 @@ CNN model for "Intel Image Classification" dataset.
    **2.** Change folder`s structure, so it looks like the drawing below\
 
 Dataset:\
-![alt text](image.png)
+![alt text](assets/images/tree.png)
