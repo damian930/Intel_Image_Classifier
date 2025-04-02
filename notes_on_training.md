@@ -3,7 +3,7 @@ All the tessting of different parameters, layers... go here
 
 ```python
 Model 1.1: 
-    Regular torch cnn totoial weights
+    Regular_torch_cnn_totoial_weights
         (
             self.conv1 = nn.Conv2d(3, 6, 5)
             self.pool  = nn.MaxPool2d(2, 2)
@@ -14,8 +14,8 @@ Model 1.1:
         )
     Epochs        -> 30
     Optimizer     -> Adam
-    Leraning rate -> 0.001
-    Weight decay  -> 0.00001
+    Leraning_rate -> 0.001
+    Weight_decay  -> 0.00001
     Result: 
 ```
 ![alt text](/assets/images/model_1-1_graphs.png)
@@ -34,12 +34,12 @@ Model 1.2:
     )
     Epochs        -> 30
     Optimizer     -> Adam
-    Leraning rate -> 0.001
-    Learning rate mid training changes:
+    Leraning_rate -> 0.001
+    Learning_rate_mid_training_changes:
         if(epoch % 5 == 0 and epoch != 0):
             for group in optimizer.param_groups:
                 group['lr'] /= 10
-    Weight decay  -> 0.00001
+    Weight_decay  -> 0.00001
     Result: 
 ```
 ![alt text](/assets/images/model_1-2_graphs.png)
@@ -58,8 +58,8 @@ Model 1.3:
     )
     Epochs        -> 25
     Optimizer     -> Adam
-    Leraning rate -> 0.0001
-    Weight decay  -> 0.00001
+    Leraning_rate -> 0.0001
+    Weight_decay  -> 0.00001
     Result: 
 ```
 ![alt text](/assets/images/model_1-3_graphs.png)
@@ -81,8 +81,8 @@ Model 2.1:
     )
     Epochs        -> 25
     Optimizer     -> Adam
-    Leraning rate -> 0.001
-    Weight decay  -> 0.00001
+    Leraning_rate -> 0.001
+    Weight_decay  -> 0.00001
     Result: 
 ```
 ![alt text](/assets/images/model_2-1_graphs.png)
@@ -104,8 +104,8 @@ Model 2.2:
     )
     Epochs        -> 25
     Optimizer     -> Adam
-    Leraning rate -> 0.01
-    Weight decay  -> 0.00001
+    Leraning_rate -> 0.01
+    Weight_decay  -> 0.00001
     Result: 
 ```
 ![alt text](/assets/images/model_2-2_graphs.png)
@@ -127,8 +127,8 @@ Model 2.3:
     )
     Epochs        -> 25
     Optimizer     -> Adam
-    Leraning rate -> 0.0001
-    Weight decay  -> 0.00001
+    Leraning_rate -> 0.0001
+    Weight_decay  -> 0.00001
     Result: 
 ```
 ![alt text](/assets/images/model_2-3_graphs.png)
@@ -152,8 +152,8 @@ Model 2.4 (Current Best Version):
     )
     Epochs        -> (<= 25)
     Optimizer     -> Adam
-    Leraning rate -> 0.001
-    Weight decay  -> 0.00001
+    Leraning_rate -> 0.001
+    Weight_decay  -> 0.00001
     Result: 
 ```
 ![alt text](/assets/images/model_2-4_graphs.png)
