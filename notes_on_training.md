@@ -136,7 +136,7 @@ Model 2.3:
 <hr style="width: 100%; height: 3px; background-color: yellow;">
 
 ```python
-Model 2.4 (Current Best Version): 
+Model 2.4: 
     (
         self.conv1    = nn.Conv2d(in_channels=3, out_channels=16, kernel_size=3, padding=1)
         self.pool1    = nn.MaxPool2d(kernel_size=2, stride=2)
@@ -157,3 +157,84 @@ Model 2.4 (Current Best Version):
     Result: 
 ```
 ![alt text](/assets/images/model_2-4_graphs.png)
+
+<hr style="width: 100%; height: 3px; background-color: yellow;">
+
+```python
+Model 2.4: 
+    (
+        self.conv1    = nn.Conv2d(in_channels=3, out_channels=16, kernel_size=3, padding=1)
+        self.pool1    = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        self.conv2    = nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, padding=1)
+        self.pool2    = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        self.conv3    = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1)
+        self.pool3    = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        self.conv4    = nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, padding=1)
+        self.pool4    = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        self.fc1      = nn.Linear(in_features=128*9*9, out_features=250)
+        self.dropout1 = nn.Dropout(p=0.3)
+
+        self.fc2      = nn.Linear(in_features=250, out_features=125)
+        self.dropout2 = nn.Dropout(p=0.3)
+
+        self.fc3      = nn.Linear(in_features=125, out_features=50)
+        self.fc4      = nn.Linear(in_features=50, out_features=len(labels_numbers_to_strings))
+    )
+    Epochs        -> 10
+    Optimizer     -> Adam
+    Leraning_rate -> 0.001
+    Weight_decay  -> 1e-5
+    Result: 
+```
+![alt text](/assets/images/model_3-1_graphs.png)
+
+<hr style="width: 100%; height: 3px; background-color: yellow;">
+
+```python
+Model 2.4: 
+    (
+        self.conv1    = nn.Conv2d(in_channels=3, out_channels=16, kernel_size=3, padding=1)
+        self.pool1    = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        self.conv2    = nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, padding=1)
+        self.pool2    = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        self.conv3    = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1)
+        self.pool3    = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        self.conv4    = nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, padding=1)
+        self.pool4    = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        self.fc1      = nn.Linear(in_features=128*9*9, out_features=250)
+        self.dropout1 = nn.Dropout(p=0.3)
+
+        self.fc2      = nn.Linear(in_features=250, out_features=125)
+        self.dropout2 = nn.Dropout(p=0.3)
+
+        self.fc3      = nn.Linear(in_features=125, out_features=50)
+        self.fc4      = nn.Linear(in_features=50, out_features=len(labels_numbers_to_strings))
+    )
+    Epochs        -> 30
+    Optimizer     -> Adam
+    Leraning_rate -> 0.001
+    scheduler     -> StepLR, gamma = 0.1, epochs = 10
+    Weight_decay  -> 1e-5
+    Result: 
+```
+
+![alt text](/assets/images/model_3-2_graphs.png)
+
+
+
+
+
+
+
+
+
+same as model 2.4 but with exponential lr decay
+![alt text](image.png)
