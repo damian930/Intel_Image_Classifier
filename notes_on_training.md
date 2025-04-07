@@ -227,14 +227,3 @@ Model 2.4:
 ```
 
 ![alt text](/assets/images/model_3-2_graphs.png)
-
-
-
-
-
-
-
-
-
-same as model 2.4 but with exponential lr decay
-![alt text](image.png)
