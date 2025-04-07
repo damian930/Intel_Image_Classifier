@@ -1,3 +1,5 @@
+# Make a better readme
+
 CNN model for "Intel Image Classification" dataset.
 
 1. Code is placed inside code cells inside the CNN_model.ipynb file.
